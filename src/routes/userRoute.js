@@ -1,7 +1,7 @@
 import express from "express"
-import {fetch,create} from ".src/controller/userController.js";
+import {fetch,create} from "../controller/userController.js";
 
-const route=express.Routes();
+const route=express.Router();
 
 route.post("/create",create);
 route.get("/fetch",fetch);

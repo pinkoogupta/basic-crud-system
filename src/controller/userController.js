@@ -1,4 +1,4 @@
-import User from ".src/model/userModels.js";
+import {User} from "../model/userModel.js";
 
 export const create=async(req,res)=>{
     try {
@@ -12,10 +12,8 @@ export const create=async(req,res)=>{
         const savedUser=await userData.save();
         res.status(200).json(savedData);
 
-
-
     } catch (error) {
-        res.status(500).json({error:"internak server error"});
+        res.status(500).json({error:"internal server error"});
     }
 }
 export const fetch=async(req,res)=>{

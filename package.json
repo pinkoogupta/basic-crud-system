@@ -2,10 +2,11 @@
   "name": "basic-crud-system",
   "version": "1.0.0",
   "description": "crud",
-  "main": "index.js",
   "type":"module",
+  "main": "index.js",
+  
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules  src/index.js"
   },
   "author": "pinkoo",
   "license": "ISC",
