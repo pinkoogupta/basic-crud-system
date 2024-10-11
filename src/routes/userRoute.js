@@ -1,9 +1,11 @@
 import express from "express"
-import {fetch,create} from "../controller/userController.js";
+import {getUser,create,update,deleteUser} from "../controller/userController.js";
 
 const route=express.Router();
 
 route.post("/create",create);
-route.get("/fetch",fetch);
+route.get("/getUser",getUser);
+route.put("/update/:id",update);
+route.delete("/deleteUser/:id",deleteUser)
 
 export default route;
